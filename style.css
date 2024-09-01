@@ -1,0 +1,514 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: "Poppins", system-ui;
+	scroll-behavior: smooth;
+	background: #054403;
+	text-align: center;
+	width: 100%;
+}
+
+.Wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: -10;
+	opacity: 40%;
+}
+
+.Home {
+	height: 90vh;
+	.Title {
+		position: absolute;
+		top: 48%;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.ContainerBackground img {
+		position: absolute;
+		display: flex;
+		height: 90vh;
+		width: 100%;
+	}
+
+	.ContainerBackground img:nth-child(2) {
+		z-index: 10;
+	}
+	.ContainerBackground img:nth-child(3) {
+		z-index: 1;
+	}
+	.ContainerBackground img:nth-child(5),
+	.ContainerBackground img:nth-child(6) {
+		z-index: 4;
+	}
+
+	.ContainerBackground img:nth-child(7) {
+		position: absolute;
+		right: 5%;
+		top: 4%;
+		height: 150px;
+		width: auto;
+	}
+}
+
+/* awan */
+
+.Awan {
+	position: relative;
+	width: 100%;
+	height: 300px; /* Sesuaikan dengan kebutuhan */
+	overflow: hidden; /* Menyembunyikan bagian gambar yang melampaui kontainer */
+	white-space: nowrap; /* Menghindari pembungkusan konten */
+	width: 100%;
+	contain: paint layout; /* Mengandung properti paint dan layout */
+}
+
+.Awan .Cloud {
+	position: absolute;
+	height: auto;
+	width: auto;
+}
+
+/* Atur posisi dan animasi untuk setiap awan */
+#Cloud1 {
+	top: 5%;
+	height: 120px;
+	width: auto;
+	animation: moveLeftToRight 18s linear infinite;
+	left: -30%;
+}
+
+#Cloud2 {
+	top: 14%;
+	height: 80px;
+	width: auto;
+	left: -35%;
+	opacity: 85%;
+	animation: moveLeftToRight 10s linear infinite;
+}
+
+#Cloud3 {
+	top: 28%;
+	height: 120px;
+	width: auto;
+	left: -25%;
+	animation: moveLeftToRight 30s linear infinite;
+}
+
+#Cloud4 {
+	top: 10%;
+	width: auto;
+	height: 115px;
+	left: -40%;
+	animation: moveLeftToRight 30s linear infinite;
+}
+
+#Cloud5 {
+	top: 16%;
+	width: auto;
+	height: 90px;
+	left: -40%;
+	opacity: 85%;
+	animation: moveLeftToRight 22s linear infinite;
+}
+
+#Cloud6 {
+	top: 20%;
+	width: auto;
+	height: 110px;
+	left: -35%;
+	animation: moveLeftToRight 14.2s linear infinite;
+}
+
+#Cloud7 {
+	top: 10%;
+	width: auto;
+	height: 70px;
+	left: -20%;
+	opacity: 85%;
+	animation: moveLeftToRight 14s linear infinite;
+}
+
+#Cloud8 {
+	top: 15%;
+	width: auto;
+	height: 120px;
+	left: -10%;
+	animation: moveLeftToRight 13s linear infinite;
+}
+
+#Cloud9 {
+	top: 50%;
+	width: auto;
+	height: 85px;
+	left: -10%;
+	opacity: 85%;
+	animation: moveLeftToRight 10s linear infinite;
+}
+
+@keyframes moveLeftToRight {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(
+			calc(135vw)
+		); /* Lebih dari 100vw untuk memastikan awan hilang dari tampilan sebelum kembali */
+	}
+}
+
+/*  */
+
+.container {
+	width: 100%;
+	display: flex;
+	gap: 3%;
+}
+
+.Surgery {
+	position: relative;
+	color: #fff798;
+	background: #054403;
+	padding: 5% 5% 0% 5%;
+	width: 100.3%;
+	z-index: 100;
+}
+
+.Surgery h2 {
+	text-align: left;
+	font-size: 2rem;
+	margin-bottom: 30px;
+	text-shadow: 0px 0px 0 rgb(238, 176, 0), 1px 1px 0 rgb(222, 160, 0), 2px 2px 0 rgb(205, 143, 0),
+		3px 3px 0 rgb(188, 126, 0), 4px 4px 3px rgba(0, 0, 0, 0.6), 4px 4px 1px rgba(0, 0, 0, 0.5),
+		0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.Surgery .Harga,
+.Surgery .results {
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border-radius: 10px;
+	padding: 30px 20px 20px;
+}
+
+.input-group {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.input-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #fcf7c8;
+}
+
+.input-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.input-image {
+	position: absolute;
+	width: 30px; /* Sesuaikan ukuran sesuai kebutuhan */
+	height: auto;
+}
+
+.slash {
+	font-size: 24px; /* Ukuran font untuk garis miring */
+	color: greenyellow; /* Warna garis miring */
+	position: absolute;
+	opacity: 70%;
+	right: 9%;
+}
+
+.left-image {
+	left: 15px; /* Tambahkan jarak dari sisi kiri */
+}
+
+.right-image {
+	right: 15px; /* Tambahkan jarak dari sisi kanan */
+	width: auto;
+	height: 25px;
+}
+
+input[type="number"] {
+	border: none;
+	width: 100%; /* Pastikan input mengisi ruang yang tersedia */
+	padding-left: 55px;
+	padding-right: 70px;
+	padding-top: 15.5px;
+	padding-bottom: 13px;
+	flex: 1; /* Mengisi sisa ruang */
+	border-radius: 10px;
+	outline: none;
+	background: #054403;
+	color: white;
+
+	font-size: 1em;
+	transition: border-color 0.3s ease, background-color 0.3s ease;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+input[type="number"]:focus {
+	background: #075f04;
+}
+
+#calculateButton {
+	width: 97%;
+	padding: 15px;
+
+	background: #1d990c;
+	color: #fff798;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 1.1em;
+	transition: background 0.3s ease, transform 0.2s ease;
+	margin-top: 25px;
+}
+
+#calculateButton:hover {
+	background: #1c990c9a;
+	transform: scale(1.03);
+}
+
+#calculateButton:active {
+	background: #1d990c;
+}
+
+.results {
+	text-align: left;
+	padding: 20px;
+	border-radius: 10px;
+	width: 100%;
+}
+
+
+.results p {
+	position: relative;
+	bottom: 20px;
+	padding-bottom: 5px;
+	font-size: 1.1em;
+	color: #fcf7c8;
+}
+
+.results ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.results li {
+	position: relative;
+	bottom: 20px;
+	color: #fcf7c8;
+	margin-bottom: 12px;
+	gap: 5px;
+	font-size: 1em;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #444;
+	padding-bottom: 5px;
+}
+
+.results li:last-child {
+}
+
+#Gedung1,
+#Gedung2,
+#Kota1,
+#Kota2,
+#Sun,
+#Title {
+	will-change: transform, opacity;
+}
+
+#Cloud1,#Cloud2,#Cloud3,#Cloud4,#Cloud5,#Cloud6,#Cloud7,#Cloud8,#Cloud9{
+	will-change: transform, opacity;
+}
+
+/* .input-group,.Title1,#results p,#remainingItems li {
+	will-change: transform, opacity;
+} */
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+/* Internet Explorer 10+ */
+input[type="number"] {
+	-ms-appearance: textfield;
+}
+
+hr {
+	opacity: 70%;
+	margin-top: 4%;
+}
+
+footer {
+	color: #fff; /* Warna teks */
+	text-align: center; /* Teks rata tengah */
+	padding: 20px 0px; /* Jarak atas-bawah dalam footer */
+	bottom: 0; /* Tetapkan ke bawah */
+	width: 100%; /* Lebar penuh halaman */
+}
+
+footer a {
+	color: rgb(238, 176, 0); /* Warna link */
+	text-decoration: none; /* Hapus garis bawah */
+	font-weight: bold; /* Cetak tebal */
+}
+
+footer a:hover {
+	text-decoration: underline; /* Tambahkan garis bawah saat hover */
+}
+
+.About p {
+	position: relative;
+	bottom: 20px;
+}
+
+.Title1 {
+	font-size: 2.5rem !important;
+}
+
+
+@media (min-width: 768px) {
+	.input-group {
+		display: inline-block;
+		width: 45%;
+		vertical-align: top;
+		margin-right: 5%;
+	}
+	.input-group:nth-of-type(2n) {
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.Title1 {
+		margin-top: 50px;
+		font-size: 1.5rem !important;
+		font-weight: 900;
+	}
+	
+
+	.input-group {
+		width: 100%;
+	}
+
+	.input-image {
+		width: 25px; /* Ukuran gambar lebih kecil di layar kecil */
+	}
+
+	input[type="number"] {
+		padding-left: 55px;
+		padding-right: 65px;
+		padding-top: 15.5px;
+		padding-bottom: 13px;
+	}
+
+	.slash {
+		right: 15%;
+	}
+
+	.container {
+		flex-direction: column;
+	}
+
+	.results{
+		margin-top: 30px;
+	}
+
+	#Gedung1 {
+		height: 600px;
+		left: -53%;
+		bottom: 0;
+		width: auto;
+	}
+
+	#Gedung2 {
+		height: 600px;
+		right: -45%;
+		bottom: 0;
+
+		width: auto;
+	}
+
+	#Kota1,
+	#Kota2 {
+		bottom: 10%;
+	}
+
+	#Sun {
+		width: 80px;
+		height: auto;
+	}
+
+	.ContainerBackground img {
+		height: 100vh;
+		width: auto;
+	}
+
+	.Title img {
+		width: 150px;
+		height: auto;
+	}
+
+	
+
+	#Cloud2,#Cloud4,#Cloud6,#Cloud8,#Cloud9 {
+		display: none;
+	}
+
+
+	#Cloud1 {
+		top: 5%;
+		height: 50px;
+		animation: moveLeftToRight 18s linear infinite;
+	}
+
+	
+	#Cloud3 {
+		top: 28%;
+		height: 60px;
+		animation: moveLeftToRight 7s linear infinite;
+	}
+
+	#Cloud5 {
+		top: 16%;
+		height: 50px;
+		animation: moveLeftToRight 14s linear infinite;
+	}
+
+	#Cloud7 {
+		top: 10%;
+		height: 60px;
+		animation: moveLeftToRight 10s linear infinite;
+	}
+
+}
